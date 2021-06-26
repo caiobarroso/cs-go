@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins","sans-serif";
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/mirage.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+form {
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.content {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+input[type=text] {
+    width: 60%;
+    border-radius: 15px;
+    border: none;
+    padding: 0.8rem;
+    outline: none;
+}
+input[type=number] {
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+    padding: 0.8rem; 
+    outline: none;
+}
+button {
+    background-color: #2a2a72;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    outline: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+button:hover{
+    background-color: #171746;
+}
+img{
+    height: 25px;
+}
+main {
+    display: block;
+    margin-left: 1rem;
+}
+
+.main-content {
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+    border-radius: 25px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-a {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.title-a {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    top: -2rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+.info-a {
+    display: flex;
+    position: relative;
+    margin-top: -3.5rem;
+}
+#ta {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+#na {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    margin-left: -2rem;
+}
+.card-b {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.title-b {
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    top: -2rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+.info-b {
+    display: flex;
+    position: relative;
+    margin-top: -3.5rem;
+}
+#tb {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+#nb {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    margin-right: -2rem;
+}
+.main-title {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    top: -2rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    color: black;
+}
+.stats {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background-color: #2a2a72;
+    color: white;
+    width: 120%;
+    height: 165px;
+    left: -1rem;
+    top: -2.6rem;
+}
+
+#stat-a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+}
+#stat-b{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    margin-left: 2rem;
+}
+
+.kd-teamA {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.53rem;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0.20rem;
+    text-align: center;
+    
+}
+.kd-teamB {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.53rem;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0.20rem;
+    text-align: center;
+}
+.names-a {
+    background-color: #2a2a72;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.53rem;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0.20rem;
+    text-align: center;
+}
+.names-b {
+    background-color: #2a2a72;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.53rem;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0.2rem;
+    text-align: center;
+}
+.section-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: -1.8rem;
+}
+.stats-kd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+.kd-title {
+    position: relative;
+    font-size: 7px;
+    background-color: black;
+    height: 20px;
+    top: -0.6rem;
+}
+.section-02{
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+    font-size: 12px;
+}
+.info-kds {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.med-title {
+    position: relative;
+    font-size: 7px;
+    background-color: black;
+    height: 20px;
+    top: -1rem;
+} 
+
+#mpvs-id{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+}
+#mvpa{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+}
+#mvpb{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+    margin-left: 2rem;
+}
+
+.destaques-title {
+    font-size: 7px;
+    margin-top: -1.8rem;
+    background-color: black;
+    height: 20px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* colors : https://www.eggradients.com/ 
+            https://flatuicolors.com/   */
