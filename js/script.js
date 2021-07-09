@@ -16,8 +16,8 @@ var n
 var sum = 0
 var index = 0
 var media = 0
-var avgs = []
 // Formato final do array
+var avgs = []
 var difs = []
 var comb = []
 
