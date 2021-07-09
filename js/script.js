@@ -245,6 +245,7 @@ form.addEventListener('submit', (e) => {
 // -> dif() -> PRIMEIRAMENTE ELE ORDENA O ARRAY 'avgs' E O 'arr' EM FORMATO DE TIME. O PADRAO SEGUIDO É 0-251 :: 125-126. OU SEJA, 
 //    O TIME QUE ESTÁ NA POSIÇÃO 'arr[0]', ENFRENTARÁ O TIME QUE ESTÁ NA POSIÇÃO 'arr[251]' E ASSIM POR DIANTE. A BASE DO ARRAY DOS ADVERSÁRIOS É ASSIM:
 //    [[[team-a],[team-b]]], A MESMA COISA FOI FEITA COM AS DIFERENÇAS. NO FIM DAS CONTAS, UM ARRAY DE 252 POSIÇÕES FOI CONVERTIDO EM UM ARRAY DE 126 POSIÇOES
+//    Calculo de todas as probabilidades -> 10! ÷ 5!(10-5)! = 252
 
 
 
