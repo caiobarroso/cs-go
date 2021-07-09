@@ -17,7 +17,7 @@ var sum = 0
 var index = 0
 var media = 0
 var avgs = []
-
+// Formato final do array
 var difs = []
 var comb = []
 
@@ -78,7 +78,7 @@ function dif() {
     }
     getValues()
 }
-function getValues () {
+function getValues() {
     var min = Math.min.apply(Math, difs); // Pega o menor valor do array difs
     var index = difs.indexOf(min) // Index da menor posição
 
@@ -218,7 +218,7 @@ function showInfo(nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) {
 
 function clearAll() {
     names = [], supNames = [], arr = [],
-    kds = [], supKds = [], arr2 = [], avgs = []
+        kds = [], supKds = [], arr2 = [], avgs = []
     sum = 0, index = 0, media = 0, difs = [], comb = []
 }
 
