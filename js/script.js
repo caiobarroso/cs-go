@@ -117,52 +117,52 @@ function createCard() {
                             </div>
                         </div>
                     </div>
-                        <div class="box">
-                            <div class="main-title">
-                                <h1>STATS</h1>
+                    <div class="box">
+                        <div class="main-title">
+                            <h1>STATS</h1>
+                        </div>
+                        <div class="stats">
+                            <div class="avgs-title">
+                                <h1>AVERAGES K/D</h1>
                             </div>
-                            <div class="stats">
-                                <div class="kd-title">
-                                    <h1>AVERAGES K/D</h1>
+                            <div class="avgs-section">
+                                <div class="stat-a">
+                                    <h1 id="med-a"></h1>
                                 </div>
-                                <div class="section-01">
-                                    <div id="stat-a">
-                                        <h1 id="med-a"></h1>
-                                    </div>
-                                    <div id="stat-b">
-                                        <h1 id="med-b"></h1>
-                                    </div>
-                                </div>
-                                <div class="destaques-title">
-                                    <h1>MVP'S</h1>
-                                </div>
-                                <div id="mpvs-id">
-                                    <div id="mvpa">
-                                        <h1 id="val-a"></h1>
-                                    </div>
-                                    <div id="mvpb">
-                                        <h1 id="val-b"></h1>
-                                    </div>
-                                </div>
-                                <div class="med-title">
-                                    <h1>DIFF</h1>
-                                </div>
-                                <div class="section-02">
-                                    <h1 id="med-ger"></h1>
+                                <div class="stat-b">
+                                    <h1 id="med-b"></h1>
                                 </div>
                             </div>
-                        </div>
-                    <div class="card-b">
-                        <div class="title-b">
-                            <h1>TEAM B</h1>
-                        </div>
-                        <div class="info-b">
-                            <div id="nb">
-                            </div> 
-                            <div id="tb">
+                            <div class="mvps-title">
+                                <h1>MVP'S</h1>
+                            </div>
+                            <div class="mpvs-section">
+                                <div class="mvpa">
+                                    <h1 id="val-a"></h1>
+                                </div>
+                                <div class="mvpb">
+                                    <h1 id="val-b"></h1>
+                                </div>
+                            </div>
+                            <div class="med-title">
+                                <h1>DIFF</h1>
+                            </div>
+                            <div class="med-section">
+                                <h1 id="med-ger"></h1>
                             </div>
                         </div>
                     </div>
+                <div class="card-b">
+                    <div class="title-b">
+                        <h1>TEAM B</h1>
+                    </div>
+                    <div class="info-b">
+                        <div id="nb">
+                        </div> 
+                        <div id="tb">
+                        </div>
+                    </div>
+                </div>
                 </div>
                     
     `

@@ -150,13 +150,11 @@ main {
     position: relative;
     background-color: #2a2a72;
     color: white;
-    width: 120%;
     height: 165px;
-    left: -1rem;
     top: -2.6rem;
 }
 
-#stat-a {
+.stat-a {
     width: 44px;
     height: 44px;
     display: flex;
@@ -165,7 +163,7 @@ main {
     font-size: 12px;
     color: white;
 }
-#stat-b{
+.stat-b{
     width: 44px;
     height: 44px;
     display: flex;
@@ -225,7 +223,7 @@ main {
     padding: 0.2rem;
     text-align: center;
 }
-.section-01 {
+.avgs-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,14 +236,14 @@ main {
     justify-content: center;
     margin-top: -10px;
 }
-.kd-title {
+.avgs-title {
     position: relative;
     font-size: 7px;
     background-color: black;
     height: 20px;
     top: -0.6rem;
 }
-.section-02{
+.med-section{
     align-items: center;
     justify-content: center;
     margin-top: -2rem;
@@ -265,23 +263,23 @@ main {
     top: -1rem;
 } 
 
-#mpvs-id{
+.mpvs-section{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -5px;
 }
-#mvpa{
-    width: 44px;
+.mvpa{
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 10px;
     color: white;
+    margin-left: 10px;
+    
 }
-#mvpb{
-    width: 44px;
+.mvpb{
     height: 44px;
     display: flex;
     align-items: center;
@@ -289,9 +287,10 @@ main {
     font-size: 10px;
     color: white;
     margin-left: 2rem;
+    margin-right: 10px;
 }
 
-.destaques-title {
+.mvps-title {
     font-size: 7px;
     margin-top: -1.8rem;
     background-color: black;
