@@ -21,7 +21,7 @@ var avgs = []
 var difs = []
 var comb = []
 
-function fill() {
+const fill = () => {
     $('input[type=text]').each(function () {
         var values = ($(this).val());
         names.push(values)
@@ -32,7 +32,8 @@ function fill() {
     });
     n = names.length
 }
-function combinationUtil(names, data, kds, storage, start, end, index, r) {
+
+const combinationUtil = (names, data, kds, storage, start, end, index, r) => {
     if (index == r) {
         supNames = []
         supKds = []
@@ -49,12 +50,14 @@ function combinationUtil(names, data, kds, storage, start, end, index, r) {
         combinationUtil(names, data, kds, storage, i + 1, end, index + 1, r);
     }
 }
-function printCombination(names, kds, n, r) {
+
+const printCombination = (names, kds, n, r) => {
     let data = new Array(r);
     let storage = new Array(r)
     combinationUtil(names, data, kds, storage, 0, n - 1, 0, r);
 }
-function calculate() {
+
+const calculate = () => {
     for (var i = 0; i < arr2.length; i++) {
         sum = 0
         index = 0
@@ -66,7 +69,8 @@ function calculate() {
         avgs.push(media.toFixed(3))
     }
 }
-function dif() {
+
+const  dif = () => {
     var j = avgs.length
     for (var i = 0; i < avgs.length / 2; i++) {
         j--
@@ -78,7 +82,8 @@ function dif() {
     }
     getValues()
 }
-function getValues() {
+
+const getValues = () => {
     var min = Math.min.apply(Math, difs); // Pega o menor valor do array difs
     var index = difs.indexOf(min) // Index da menor posição
 
@@ -103,7 +108,7 @@ function getValues() {
     showInfo(nta, ntb, kda, kdb, mta, mtb, min, mvp1, mvp2)
 }
 
-function createCard() {
+const createCard = () => {
     const cardHTML = `
                 <div class="main-content">
                     <div class="card-a">
@@ -169,7 +174,7 @@ function createCard() {
     main.innerHTML = cardHTML
 }
 
-function showInfo(nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) {
+const showInfo = (nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) => {
 
     const listA = document.getElementById('ta')
     const listB = document.getElementById('tb')
@@ -216,7 +221,7 @@ function showInfo(nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) {
     mvp02.innerHTML = mvpb
 }
 
-function clearAll() {
+const clearAll = () => {
     names = [], supNames = [], arr = [],
         kds = [], supKds = [], arr2 = [], avgs = []
     sum = 0, index = 0, media = 0, difs = [], comb = []
