@@ -17,9 +17,9 @@ var sum = 0
 var index = 0
 var media = 0
 // Formato final do array
-var avgs = []
-var difs = []
-var comb = []
+var avgs = [] // media de kd de cada time -> array com 252 posições
+var difs = [] // mostrará a diferença entre as médias de KD de cada duelo -> Será um array com 126 posições.
+var comb = [] // mostrará o array em formato de time (Time A vs Time B) [ [ [a,b,c,d] , [e,f,g,h] ], [ [x,y,v,w,k] , [q,r,t,i,u] ] ] -> No fim das contas, será um array multidimensional com 126 posiçÕes. 
 
 const fill = () => {
     $('input[type=text]').each(function () {
@@ -235,6 +235,8 @@ form.addEventListener('submit', (e) => {
     calculate()
     createCard()
     dif()
+
+    console.log(avgs)
     clearAll()
 })
 
