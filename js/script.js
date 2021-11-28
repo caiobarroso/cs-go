@@ -20,6 +20,12 @@ var media = 0
 var avgs = [] // media de kd de cada time -> array com 252 posições
 var difs = [] // mostrará a diferença entre as médias de KD de cada duelo -> Será um array com 126 posições.
 var comb = [] // mostrará o array em formato de time (Time A vs Time B) [ [ [a,b,c,d] , [e,f,g,h] ], [ [x,y,v,w,k] , [q,r,t,i,u] ] ] -> No fim das contas, será um array multidimensional com 126 posiçÕes. 
+// REMAKE
+let qtd = 7
+let rmk = []
+let i = 1
+
+var min
 
 const fill = () => {
     $('input[type=text]').each(function () {
@@ -57,7 +63,7 @@ const printCombination = (names, kds, n, r) => {
     combinationUtil(names, data, kds, storage, 0, n - 1, 0, r);
 }
 
-const calculate = () => {
+const fillAvgs = () => {
     for (var i = 0; i < arr2.length; i++) {
         sum = 0
         index = 0
@@ -70,7 +76,7 @@ const calculate = () => {
     }
 }
 
-const  dif = () => {
+const dif = () => {
     var j = avgs.length
     for (var i = 0; i < avgs.length / 2; i++) {
         j--
@@ -80,11 +86,13 @@ const  dif = () => {
         difs.push(diferenca)
         comb.push([ta, tb])
     }
-    getValues()
+
+    remake()
+    getValues(Math.min.apply(Math, difs))
 }
 
-const getValues = () => {
-    var min = Math.min.apply(Math, difs); // Pega o menor valor do array difs
+const getValues = (min) => {
+    // min = Math.min.apply(Math, difs); // Pega o menor valor do array difs
     var index = difs.indexOf(min) // Index da menor posição
 
     var nta = (comb[index][0]) // Os 5 nomes do time A
@@ -156,6 +164,10 @@ const createCard = () => {
                                 <h1 id="med-ger"></h1>
                             </div>
                         </div>
+
+                        <div class="button-area">
+                            <button class="rmk-btn" onClick="onClick()">Remake</button>
+                        </div>
                     </div>
                 <div class="card-b">
                     <div class="title-b">
@@ -221,10 +233,41 @@ const showInfo = (nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) => {
     mvp02.innerHTML = mvpb
 }
 
+function onClick () {
+    if (i < qtd) {
+        min = rmk[i]
+        i++;
+        console.log(min)
+    } else {
+        i = i;
+    }
+}
+const remake = () => {
+
+    let copy_arr = [...difs]
+    copy_arr.sort((a, b) => a - b)
+    let removeDuplicates = [...new Set(copy_arr)]
+    let tenSmallestDifs = removeDuplicates.slice(0, 10)
+    let size = tenSmallestDifs.length
+
+    fillRemakeArray(tenSmallestDifs, size, qtd, removeDuplicates)
+}
+
+const fillRemakeArray = (arr, size, n, removeDuplicates) => {
+    for (let i = 0; i < size; ++i) {
+        if (arr[i] < removeDuplicates[n]) {
+            rmk.push(arr[i]);
+        }
+    }
+    console.log(rmk)
+}
+
+
 const clearAll = () => {
     names = [], supNames = [], arr = [],
         kds = [], supKds = [], arr2 = [], avgs = []
-    sum = 0, index = 0, media = 0, difs = [], comb = []
+    sum = 0, index = 0, media = 0, difs = [],
+        comb = []
 }
 
 form.addEventListener('submit', (e) => {
@@ -232,13 +275,13 @@ form.addEventListener('submit', (e) => {
 
     fill()
     printCombination(names, kds, n, r);
-    calculate()
+    fillAvgs()
     createCard()
     dif()
-
-    console.log(avgs)
     clearAll()
 })
+
+
 
 // DOCUMENTATION:
 // -> fill() -> PREENCHEU OS VETORES 'names' E 'kds' COM TODAS AS INFORMAÇÕES
@@ -247,7 +290,7 @@ form.addEventListener('submit', (e) => {
 //    ESSES 5 NOMES SERAM REPASSADOS PARA O 'arr' EM FORMA DE ARRAY, APÓS ISSO, O 'supNames' É LIMPO, E RECOMEÇA TODA A OPERAÇÃO. OU SEJA, 
 //    O 'supNames' SÓ RECEBE 5 NOMES POR VEZ, E SUA FUNÇÃO É REPASSAR PARA O ARRAY PRINCIPAL DE 5 EM 5 NOMES, SENDO ASSIM, O 'supNames' 
 //    NUNCA RECEBERÁ MAIS DE 5 ELEMENTOS EM SUA ESTRUTURA.
-// -> calculate() -> VAI RECEBER O 'arr2' COMO ARGUMENTO E VAI CALCULAR TODAS AS MÉDIAS QUE EXISTEM NO ARR2 E ARMAZENÁ-LAS EM OUTRO ARRAY. 
+// -> fillAvgs() -> VAI RECEBER O 'arr2' COMO ARGUMENTO E VAI CALCULAR TODAS AS MÉDIAS QUE EXISTEM NO ARR2 E ARMAZENÁ-LAS EM OUTRO ARRAY. 
 //    POR EXEMPLO : var array = [[1,2,3],[4,5,6]]  ---- var averages = [2,5]
 // -> dif() -> PRIMEIRAMENTE ELE ORDENA O ARRAY 'avgs' E O 'arr' EM FORMATO DE TIME. O PADRAO SEGUIDO É 0-251 :: 125-126. OU SEJA, 
 //    O TIME QUE ESTÁ NA POSIÇÃO 'arr[0]', ENFRENTARÁ O TIME QUE ESTÁ NA POSIÇÃO 'arr[251]' E ASSIM POR DIANTE. A BASE DO ARRAY DOS ADVERSÁRIOS É ASSIM:

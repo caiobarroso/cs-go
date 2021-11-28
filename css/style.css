@@ -47,7 +47,7 @@ input[type=number] {
     padding: 0.8rem; 
     outline: none;
 }
-button {
+.main-btn {
     background-color: #2a2a72;
     padding: 0.5rem;
     border: none;
@@ -60,7 +60,7 @@ button {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-button:hover{
+.main-btn:hover{
     background-color: #171746;
 }
 img{
@@ -76,27 +76,24 @@ main {
     background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
     border-radius: 25px;
     width: 800px;
+    height: 320px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .card-a {
     display: inline-block;
-    margin-top: 2rem;
     margin-left: 2rem;
+    height: 100%;
 }
 .title-a {
-    position: relative;
     font-size: 12px;
     text-align: center;
     font-weight: bold;
-    top: -2rem;
     font-family: 'Carrois Gothic SC', sans-serif;
 }
 .info-a {
     display: flex;
-    position: relative;
-    margin-top: -3.5rem;
 }
 #ta {
     margin-bottom: 1rem;
@@ -109,21 +106,17 @@ main {
 }
 .card-b {
     display: inline-block;
-    margin-top: 2rem;
     margin-right: 2rem;
+    height: 100%;
 }
 .title-b {
-    position: relative;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    top: -2rem;
     font-family: 'Carrois Gothic SC', sans-serif;
 }
 .info-b {
     display: flex;
-    position: relative;
-    margin-top: -3.5rem;
 }
 #tb {
     margin-bottom: 1rem;
@@ -136,22 +129,23 @@ main {
     margin-right: -2rem;
 }
 .main-title {
-    position: relative;
     font-size: 12px;
     text-align: center;
     font-weight: bold;
-    top: -2rem;
     font-family: 'Carrois Gothic SC', sans-serif;
-    color: black;
 }
+
+.box {
+    height: 100%;
+}
+
 .stats {
     display: inline-block;
     text-align: center;
-    position: relative;
     background-color: #2a2a72;
     color: white;
     height: 165px;
-    top: -2.6rem;
+    margin-top: 15px;
 }
 
 .stat-a {
@@ -295,6 +289,28 @@ main {
     margin-top: -1.8rem;
     background-color: black;
     height: 20px;
+}
+.button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+}
+.rmk-btn {
+    color: black;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins","sans-serif";
+    font-weight: bold;
+    background-color: #FFFFF0;
+}
+
+.rmk-btn:hover {
+    background-color: #E2DFD2;
 }
 
 
