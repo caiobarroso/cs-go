@@ -23,7 +23,7 @@ var comb = [] // mostrará o array em formato de time (Time A vs Time B) [ [ [a,
 // REMAKE
 let qtd = 7
 let rmk = []
-let i = 1
+let i = 0
 
 var min
 
@@ -92,10 +92,10 @@ const dif = () => {
 }
 
 const getValues = (min) => {
-    // min = Math.min.apply(Math, difs); // Pega o menor valor do array difs
     var index = difs.indexOf(min) // Index da menor posição
 
     var nta = (comb[index][0]) // Os 5 nomes do time A
+    console.log(nta)
     var ntb = (comb[index][1]) // Os 5 nomes do time B
 
     var kda = arr2[index] // Os 5 kds do time A
@@ -237,7 +237,7 @@ function onClick () {
     if (i < qtd) {
         min = rmk[i]
         i++;
-        console.log(min)
+        getValues(rmk[i])
     } else {
         i = i;
     }
@@ -262,23 +262,21 @@ const fillRemakeArray = (arr, size, n, removeDuplicates) => {
     console.log(rmk)
 }
 
-
 const clearAll = () => {
     names = [], supNames = [], arr = [],
-        kds = [], supKds = [], arr2 = [], avgs = []
+    kds = [], supKds = [], arr2 = [], avgs = []
     sum = 0, index = 0, media = 0, difs = [],
-        comb = []
+    comb = [], rmk = []
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    clearAll()
     fill()
     printCombination(names, kds, n, r);
     fillAvgs()
     createCard()
     dif()
-    clearAll()
 })
 
 
