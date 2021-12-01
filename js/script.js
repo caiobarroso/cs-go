@@ -95,7 +95,6 @@ const getValues = (min) => {
     var index = difs.indexOf(min) // Index da menor posição
 
     var nta = (comb[index][0]) // Os 5 nomes do time A
-    console.log(nta)
     var ntb = (comb[index][1]) // Os 5 nomes do time B
 
     var kda = arr2[index] // Os 5 kds do time A
@@ -236,9 +235,9 @@ const showInfo = (nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) => {
 function onClick () {
     if (i < qtd) {
         min = rmk[i]
-        i++;
         createCard()
         getValues(rmk[i])
+        i++;
     } else {
         i = i;
     }
