@@ -23,7 +23,7 @@ var comb = [] // mostrará o array em formato de time (Time A vs Time B) [ [ [a,
 // REMAKE
 let qtd = 7
 let rmk = []
-let i = 0
+let i = 1
 
 var min
 
@@ -234,12 +234,12 @@ const showInfo = (nta, ntb, kda, kdb, mta, mtb, dif, mvpa, mvpb) => {
 
 function onClick () {
     if (i < qtd) {
-        min = rmk[i]
         createCard()
         getValues(rmk[i])
         i++;
     } else {
         i = i;
+        alert('Limite excedido!')
     }
 }
 const remake = () => {
@@ -266,7 +266,7 @@ const clearAll = () => {
     names = [], supNames = [], arr = [],
     kds = [], supKds = [], arr2 = [], avgs = []
     sum = 0, index = 0, media = 0, difs = [],
-    comb = [], rmk = []
+    comb = [], rmk = [], i = 1
 }
 
 form.addEventListener('submit', (e) => {
