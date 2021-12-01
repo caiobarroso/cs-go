@@ -237,6 +237,7 @@ function onClick () {
     if (i < qtd) {
         min = rmk[i]
         i++;
+        createCard()
         getValues(rmk[i])
     } else {
         i = i;
