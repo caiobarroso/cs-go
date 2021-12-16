@@ -8,5 +8,4 @@
   - The software will display the 2 teams, based on the minimum difference between the KDS of each team, taking an average of the KDS of the 5 players of a team and comparing it       with those of the opposing team, thus generating a fair competition for both sides.
   - It is also possible to make a remake of the times, which, each time the button is clicked, is to apply the lowest average after the generated one.
 
-![gif-02](https://user-images.githubusercontent.com/49173134/123533170-83175300-d6e9-11eb-9d71-54b3dd9e0fd3.gif)
-
+![2021-12-16 04-01-21](https://user-images.githubusercontent.com/49173134/146459277-d1a7bce2-cd5e-45b0-9c78-380cc575416a.gif)
